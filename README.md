@@ -105,4 +105,4 @@ conda env remove --p $HOME/$name
 
 ## Acknowledgements
 
-The major part of the work for this deployment was already done by Université de Versailles (see forked repo) and a lot of the content of the singleuser-image is copied over from other images. See comments in the [Dockerfile](jupyterlab/dockerfile).
+The major part of the work for this deployment was already done by Université de Versailles (see forked repo) and a lot of the content of the singleuser-image is copied over from other images. See comments in the [Dockerfile](jupyterlab/Dockerfile).
