@@ -1,7 +1,6 @@
 # JupyterHub deployment for Deep Learning containing famous Data Science / Deep Learning libs + CUDA GPU support
 
-This is an adapted version of the [Jupyterhub](https://jupyter.org/hub) deployment in use at the Uni of Konstanz based on the
-deployment in use at [Université de
+This is an adapted version of the [Jupyterhub](https://jupyter.org/hub) deployment in use at the [Data Visualization and Analysis Group](https://www.vis.uni-konstanz.de/) of the Uni of Konstanz based on the deployment in use at [Université de
 Versailles](https://jupyter.ens.uvsq.fr/).
 
 ## Features
