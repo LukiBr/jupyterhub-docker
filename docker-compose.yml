@@ -8,11 +8,13 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - jupyterhub_data:/srv/jupyterhub
+      - /etc:/jup_etc/
     environment:
       - DOCKER_JUPYTER_CONTAINER=jupyterlab_img
       - DOCKER_NETWORK_NAME=${COMPOSE_PROJECT_NAME}_default
       - HUB_IP=jupyterhub
       - HOST
+      - IP
     labels:
       - "traefik.enable=true"
       - "traefik.frontend.rule=Host:${HOST}"
@@ -26,7 +28,7 @@ services:
     command: echo
 
   reverse-proxy:
-    image: traefik
+    image: traefik:1.7.17
     container_name: reverse-proxy
     ports:
       - "80:80"
@@ -34,7 +36,7 @@ services:
       - "8080:8080"
     volumes:
       - ./reverse-proxy/traefik.toml:/etc/traefik/traefik.toml
-      - /etc/certs:/etc/certs
+      - /var/ssl:/var/ssl
       - /var/run/docker.sock:/var/run/docker.sock
     restart: on-failure
 
